@@ -26,3 +26,40 @@ Just some quick sample css for styling cmb2 repeatable group fields.
 }
 
 ```
+
+## Installation
+
+1. Manually upload the ```cpt-testimonials``` plugin to your ```/wp-content/plugins/``` directory.
+   - Alternatively upload the cpt-testimonials.zip file through the ```Plugins``` menu in your wordpress admin by clicking ```Add New``` > ```Upload Plugin```.
+2. Activate the plugin through the ```Plugins``` menu in WordPress.
+3. Download CMB2 from the wordpress plugin directory, https://wordpress.org/plugins/cmb2/
+4. Manually upload the ```cmb2``` plugin to your ```/wp-content/plugins/``` directory.
+5. Activate the CMB2 plugin through the ```Plugins``` menu in WordPress.
+
+## Required Plugins
+CMB2 can be built within the plugin itself, but for the sake of keeping the template plugin easy to update and expand upon, i have chosen not to included it. Otherwsie you will need to modify the plugin and include CMB2 on your own.
+
+To use the plugin as is, you will need to install the following plugin:
+
+- [CMB2](https://github.com/WebDevStudios/CMB2)
+
+## To Do
+
+## Change Log
+Please see the the ```readme.txt``` file included in the root of the plugin’s directory for a complete change log.
+
+## License
+License: GPLv2 or later  
+License URI: [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html)
+
+> This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+>
+> This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+A copy of the license is included in the root of the plugin’s directory. The file is named ```LICENSE```.
