@@ -29,7 +29,7 @@ Just some quick sample css for styling cmb2 repeatable group fields.
 
 ## Installation
 
-1. Manually upload the ```cpt-testimonials``` plugin to your ```/wp-content/plugins/``` directory.
+1. Manually upload the ```cmb2-source-fields``` plugin to your ```/wp-content/plugins/``` directory.
    - Alternatively upload the cpt-testimonials.zip file through the ```Plugins``` menu in your wordpress admin by clicking ```Add New``` > ```Upload Plugin```.
 2. Activate the plugin through the ```Plugins``` menu in WordPress.
 3. Download CMB2 from the wordpress plugin directory, https://wordpress.org/plugins/cmb2/
