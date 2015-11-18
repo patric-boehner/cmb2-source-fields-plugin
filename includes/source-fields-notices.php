@@ -33,7 +33,7 @@ function pb_source_fields_showAdminMessages()
 	if(!class_exists( 'cmb2' ))
 	{
     // Wraning message
-		$plugin_messages[] = 'This plugin requires you to install the <strong>CMB2</strong> plugin in order to fully use the plugins features. Please install and activate <strong>CMB2</strong> before activating this plugin</a>.';
+		$plugin_messages[] = 'The <strong>Source Fields</strong> plugin requires you to install the <strong>CMB2</strong> plugin in order to fully use the plugins features. Please install and activate <strong>CMB2</strong> before activating this plugin</a>.';
 	}
   // If not, display warning message
 	if(count($plugin_messages) > 0)

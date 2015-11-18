@@ -32,7 +32,7 @@ add_action( 'cmb2_admin_init', 'pb_cmb2_source_metaboxes' );
 function pb_cmb2_source_metaboxes() {
 
 // Start with an underscore to hide fields from custom fields list
-$prefix = '_source_';
+$prefix = '_cmb2_source_metaboxes_';
 
    /**
    * Initiate the metabox
@@ -42,7 +42,7 @@ $prefix = '_source_';
       'title'         => __( 'Sources', 'cmb2' ),
       'object_types'  => array( 'post', ), // Post type
       'context'       => 'advanced', //  'normal', 'advanced', or 'side'
-      'priority'      => 'high', //  'high', 'core', 'default' or 'low'
+      'priority'      => 'core', //  'high', 'core', 'default' or 'low'
       'show_names'    => true, // Show field names on the left
       // 'cmb_styles'    => false, // false to disable the CMB stylesheet
       // 'closed'     => true, // Keep the metabox closed by default
@@ -71,6 +71,5 @@ $prefix = '_source_';
        'protocols' => array( 'http', 'https' ), // Array of allowed protocols
        // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
    ) );
-
 
 }

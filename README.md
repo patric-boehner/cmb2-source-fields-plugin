@@ -9,9 +9,40 @@ It will also need a little custom css on the admin end, as cmb2's retable group 
 ## Solving a problem
 This has been something i wanted for my own personal blog ever since moving it to wordpress. My blog is mainly meant for me, as a personal repository of creatuve inspiration. So most of the content, mianly images and video, come from other sources. I have been manualy entering the links for those sources at the bottom of posts but this could be done more easily and consistently with repeatable custom meta fields.
 
+## Contents
+
+The template source fields plugins contains the following files:
+
+- README.md. The file your currently reading.
+- readme.txt. The required wordpress plugin readme with additional details and change log.
+- LICENSE. The GPLv2 license text.
+- index.php. Never hurts to include a blank index file.
+- sample template files. See the sample files section bellow for further details.
+- pb-cmb-source-fields.php. The primary plugin file in which all other part files are included.
+- includes. Folder containing all the necessary part files.
+   - source-fields-metaboxes.php. Contains the functions to register the custom meta boxes.
+   - source-fields-notices.php. Contains any plugin notices. In particular a check to see if CMB2 is already installed upon the plugins activation.
+
+## Structure
+
+For the sake of reference and later styling, the structure for the source fields output via the ```content-post-source.php``` file is outlined bellow.
+
+```php
+<aside class="entry-sources">
+   <ul>
+      <li itemprop="citation">
+      <strong>Source: </strong>
+         <a href=" Source URL " target="_blank" itemprop="url"><!-- Source URL --></a>
+      </li>
+   </ul>
+</aside>
+<!-- .entry-sources -->'
+
+```
+
 ## Sample CSS
 
-Just some quick sample css for styling cmb2 repeatable group fields.
+Just some quick sample css for styling cmb2 repeatable group fields after playing around in inspector. I haven't checked CMB2's css file to look at the proper structure of the selectors.
 
 ```css
 
@@ -26,6 +57,21 @@ Just some quick sample css for styling cmb2 repeatable group fields.
 }
 
 ```
+
+## Sample Files
+
+The template plugin contains a folder called sample template files. This folder contains samples of the necessary theme template files to output the custom metaboxes for the testimonial post type.
+
+Contents
+
+content-post-source.php.php
+single-post.php
+
+#### Notice
+
+I build the post type sample template files on the Genesis Framework. The plugin itself will run independent of the theme being used, but the single- sample template files contain functions and hooks specific to the Genesis Framework. Each is using the get_template_part( 'content', 'post-source' ); function to include the ```pb-cmb-source-fields.php``` file.
+
+The ```pb-cmb-source-fields.php``` contains all the functions to output the source custom metadata and all its basic markup structure, and can be used within any theme. You will simply need to modify your loop to include it.
 
 ## Installation
 
@@ -44,6 +90,9 @@ To use the plugin as is, you will need to install the following plugin:
 - [CMB2](https://github.com/WebDevStudios/CMB2)
 
 ## To Do
+
+- Need to setup function to reuses the appropriate template file for both single and archive pages.
+- Review the Schema structure.
 
 ## Change Log
 Please see the the ```readme.txt``` file included in the root of the plugin’s directory for a complete change log.
