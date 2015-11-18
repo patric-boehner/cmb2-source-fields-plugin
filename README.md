@@ -13,15 +13,15 @@ This has been something i wanted for my own personal blog ever since moving it t
 
 The template source fields plugins contains the following files:
 
-- README.md. The file your currently reading.
-- readme.txt. The required wordpress plugin readme with additional details and change log.
-- LICENSE. The GPLv2 license text.
-- index.php. Never hurts to include a blank index file.
-- sample template files. See the sample files section bellow for further details.
-- pb-cmb-source-fields.php. The primary plugin file in which all other part files are included.
-- includes. Folder containing all the necessary part files.
-   - source-fields-metaboxes.php. Contains the functions to register the custom meta boxes.
-   - source-fields-notices.php. Contains any plugin notices. In particular a check to see if CMB2 is already installed upon the plugins activation.
+- ```README.md```. The file your currently reading.
+- ```readme.txt```. The required wordpress plugin readme with additional details and change log.
+- ```LICENSE```. The GPLv2 license text.
+- ```index.php```. Never hurts to include a blank index file.
+- ```sample template file```s. See the sample files section bellow for further details.
+- ```pb-cmb-source-fields.php```. The primary plugin file in which all other part files are included.
+- ```ncludes```. Folder containing all the necessary part files.
+   - ```source-fields-metaboxes.php```. Contains the functions to register the custom meta boxes.
+   - ```source-fields-notices.php```. Contains any plugin notices. In particular a check to see if CMB2 is already installed upon the plugins activation.
 
 ## Structure
 
@@ -62,10 +62,10 @@ Just some quick sample css for styling cmb2 repeatable group fields after playin
 
 The template plugin contains a folder called sample template files. This folder contains samples of the necessary theme template files to output the custom metaboxes for the testimonial post type.
 
-Contents
+**Contents**
 
-content-post-source.php.php
-single-post.php
+- ```content-post-source.php```
+- ```single-post.php```
 
 #### Notice
 
