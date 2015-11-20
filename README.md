@@ -17,9 +17,9 @@ The template source fields plugins contains the following files:
 - ```readme.txt```. The required wordpress plugin readme with additional details and change log.
 - ```LICENSE```. The GPLv2 license text.
 - ```index.php```. Never hurts to include a blank index file.
-- ```sample template file```s. See the sample files section bellow for further details.
+- ```sample template files```. See the sample files section bellow for further details.
 - ```pb-cmb-source-fields.php```. The primary plugin file in which all other part files are included.
-- ```ncludes```. Folder containing all the necessary part files.
+- ```Includes```. Folder containing all the necessary part files.
    - ```source-fields-metaboxes.php```. Contains the functions to register the custom meta boxes.
    - ```source-fields-notices.php```. Contains any plugin notices. In particular a check to see if CMB2 is already installed upon the plugins activation.
 
