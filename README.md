@@ -15,11 +15,18 @@ The template source fields plugins contains the following files:
 - ```readme.txt```. The required wordpress plugin readme with additional details and change log.
 - ```LICENSE```. The GPLv2 license text.
 - ```index.php```. Never hurts to include a blank index file.
+<<<<<<< HEAD
 - ```/sample template file```s. See the sample files section bellow for further details.
 - ```pb-cmb-source-fields.php```. The primary plugin file in which all other part files are included.
 - ```/includes```. Folder containing all the necessary part files.
    - ```source-fields-metaboxes.php```. Contains the functions to register the repeatable group of custom meta boxes.
    - ```source-fields-metaboxes-v2.php```. Contains the functions to register the repeatable fields of custom meta boxes.
+=======
+- ```sample template files```. See the sample files section bellow for further details.
+- ```pb-cmb-source-fields.php```. The primary plugin file in which all other part files are included.
+- ```Includes```. Folder containing all the necessary part files.
+   - ```source-fields-metaboxes.php```. Contains the functions to register the custom meta boxes.
+>>>>>>> a302b32f9be1fba987a98b7c39413d9d63e75a0b
    - ```source-fields-notices.php```. Contains any plugin notices. In particular a check to see if CMB2 is already installed upon the plugins activation.
 - ```/css```
    -```cmb2-custom.css```. Contains some custom css to modify how cmb2 handles repeatable groups. The css file is enqueued in the ```pb-cmb-source-fields.php```, file but is commented out by default.
