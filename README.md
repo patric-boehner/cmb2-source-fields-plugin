@@ -60,6 +60,7 @@ Just some quick sample css for styling cmb2 repeatable group fields after playin
 }
 .cmb-row.cmb-remove-field-row {
     width: 40%;
+    display: inline-block
 }
 
 ```
