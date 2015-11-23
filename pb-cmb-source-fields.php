@@ -45,5 +45,15 @@ require plugin_dir_path( __FILE__ ) . 'includes/source-fields-notices.php';
 
 //* Add Support for Testimonial Specific Custom Metaboxes (cmb2)
 if( !class_exists("CMB2") ){
-	require_once( plugin_dir_path(__FILE__)."includes/source-fields-metaboxes.php" );
+	// require_once( plugin_dir_path(__FILE__)."includes/source-fields-metaboxes.php" );
+	require_once( plugin_dir_path(__FILE__)."includes/source-fields-metaboxes-v2.php" );
 }
+
+// Load Custom CMB2 Stylesheet in Admin Post Edit Screen
+// add_action('admin_enqueue_scripts', 'pb_cmb2_custom_style');
+// function pb_cmb2_custom_style( $hook ) {
+// 	if ( 'post.php' != $hook ) {
+//         return;
+//     }
+//   wp_enqueue_style('cmb2-custom', plugin_dir_url( __FILE__ ) .'css/cmb2-custom.css', '1.0.1', true );
+// }

@@ -1,13 +1,11 @@
 # Source Fields Meta Box - Using CMB2
 
-Template for a basic source fields plugin with custom meta fields using the [CMB2 tool kit](https://github.com/WebDevStudios/cmb2) for easily adding source links to posts.
+Template for a basic source fields plugin with custom meta fields using the [CMB2 tool kit](https://github.com/WebDevStudios/cmb2) for easily adding source links to posts. There are two versions, the active version wich allows only for a repeatable url fields and one with a repeatable group of fields that can be expanded upon to add additional meta fields.
 
-This has only just been quickly put together so I could stop thinking about it and have something to trun to when I next have more time. It contains only one repeatable field for a url, but could include additional options for heading titles and footnoting.
-
-It will also need a little custom css on the admin end, as cmb2's retable group fields are a little bulky out of the box, especialy for a single line meta box.
+This has only just been quickly put together so I could stop thinking about it and have something to turn to when I next have more time. It contains only one repeatable field for a url, but could include additional options for heading titles and footnoting.
 
 ## Solving a problem
-This has been something i wanted for my own personal blog ever since moving it to wordpress. My blog is mainly meant for me, as a personal repository of creatuve inspiration. So most of the content, mianly images and video, come from other sources. I have been manualy entering the links for those sources at the bottom of posts but this could be done more easily and consistently with repeatable custom meta fields.
+This has been something i wanted for my own personal blog ever since moving it to wordpress. My blog is mainly meant for me, as a personal repository of creative inspiration. So most of the content, mainly images and video, come from other sources. I have been manually entering the links for those sources at the bottom of posts but this could be done more easily and consistently with repeatable custom meta fields.
 
 ## Contents
 
@@ -17,11 +15,14 @@ The template source fields plugins contains the following files:
 - ```readme.txt```. The required wordpress plugin readme with additional details and change log.
 - ```LICENSE```. The GPLv2 license text.
 - ```index.php```. Never hurts to include a blank index file.
-- ```sample template file```s. See the sample files section bellow for further details.
+- ```/sample template file```s. See the sample files section bellow for further details.
 - ```pb-cmb-source-fields.php```. The primary plugin file in which all other part files are included.
-- ```ncludes```. Folder containing all the necessary part files.
-   - ```source-fields-metaboxes.php```. Contains the functions to register the custom meta boxes.
+- ```/includes```. Folder containing all the necessary part files.
+   - ```source-fields-metaboxes.php```. Contains the functions to register the repeatable group of custom meta boxes.
+   - ```source-fields-metaboxes-v2.php```. Contains the functions to register the repeatable fields of custom meta boxes.
    - ```source-fields-notices.php```. Contains any plugin notices. In particular a check to see if CMB2 is already installed upon the plugins activation.
+- ```/css```
+   -```cmb2-custom.css```. Contains some custom css to modify how cmb2 handles repeatable groups. The css file is enqueued in the ```pb-cmb-source-fields.php```, file but is commented out by default.
 
 ## Structure
 
@@ -42,29 +43,28 @@ For the sake of reference and later styling, the structure for the source fields
 
 ## Sample CSS
 
-Just some quick sample css for styling cmb2 repeatable group fields after playing around in inspector. I haven't checked CMB2's css file to look at the proper structure of the selectors.
+Just some quick sample css for styling cmb2 repeatable group fields after playing around in inspector. I haven't checked CMB2's css file to look at the proper structure of the selectors. See the sample css file for more ideas.
 
 ```css
 
 .cmb-row.cmb-repeat-group-field.table-layout {
     width: 60%;
-    display: inline-block;
-    float: left;
+    display: inline-block
 }
 .cmb-row.cmb-remove-field-row {
     width: 40%;
-    display: inline-block;
 }
 
 ```
 
 ## Sample Files
 
-The template plugin contains a folder called sample template files. This folder contains samples of the necessary theme template files to output the custom metaboxes for the testimonial post type.
+The template plugin contains a folder called sample template files. This folder contains samples of the necessary theme template files to output the custom meta boxes for the testimonial post type.
 
 **Contents**
 
-- ```content-post-source.php```
+- ```content-post-source.php```. Contains the necessary code to output the repeatable group meta box approach.
+- ```content-post-source-v2.php```. Contains the necessary code to ouput the repeatable fields meta box approach.
 - ```single-post.php```
 
 #### Notice
@@ -91,7 +91,7 @@ To use the plugin as is, you will need to install the following plugin:
 
 ## To Do
 
-- Need to setup function to reuses the appropriate template file for both single and archive pages.
+- Need to setup function to reuse the appropriate template file for both single and archive pages.
 - Review the Schema structure.
 
 ## Change Log

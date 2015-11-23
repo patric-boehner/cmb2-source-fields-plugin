@@ -34,9 +34,6 @@ function pb_cmb2_source_metaboxes() {
 // Start with an underscore to hide fields from custom fields list
 $prefix = '_cmb2_source_metaboxes_';
 
-   /**
-   * Initiate the metabox
-   */
    $cmb = new_cmb2_box( array(
       'id'            => 'source_metabox',
       'title'         => __( 'Sources', 'cmb2' ),
@@ -44,31 +41,18 @@ $prefix = '_cmb2_source_metaboxes_';
       'context'       => 'advanced', //  'normal', 'advanced', or 'side'
       'priority'      => 'core', //  'high', 'core', 'default' or 'low'
       'show_names'    => true, // Show field names on the left
-      // 'cmb_styles'    => false, // false to disable the CMB stylesheet
+      'cmb_styles'    => false, // false to disable the CMB stylesheet
       // 'closed'     => true, // Keep the metabox closed by default
       ) );
 
-   $group_field_id = $cmb->add_field( array(
-      'id'          => 'source_repeat_group',
-      'type'        => 'group',
-      'description' => __( '', 'cmb' ),
-      'options'     => array(
-         'group_title'   => __( 'Reference {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
-         'add_button'    => __( 'Add New', 'cmb' ),
-         'remove_button' => __( '<span class="dashicons dashicons-no-alt"></span>', 'cmb' ),
-         'sortable'      => true, // beta
-         // 'closed'     => true, // true to have the groups closed by default
-      ),
-
-      ) );
 
    // Id's for group's fields only need to be unique for the group. Prefix is not needed.
-   $cmb->add_group_field( $group_field_id, array(
+   $cmb->add_field( array(
        'name' => '',
-       'id'   => 'url',
+       'id'   => $prefix . 'url',
        'type' => 'text_url',
-      //  'description' => 'Add necessary source link. http, https links only',
        'protocols' => array( 'http', 'https' ), // Array of allowed protocols
+       'repeatable' => true,
    ) );
 
 }

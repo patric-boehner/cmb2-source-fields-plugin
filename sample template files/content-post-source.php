@@ -2,9 +2,7 @@
 /**
  * The default template for displaying blog post source content.
  *
- * Used for single blog post.
- *
- * @package Child Theme Name
+ * @package [Child Theme Name]
  * @author  Patrick Boehner
  * @license GPL-2.0+
  * @link    http://my.studiopress.com/themes/genesis/
@@ -25,15 +23,16 @@ if ( $entries ) {
    //* Save repetable entires to arry of variable
    foreach ( (array) $entries as $key => $entry ) {
 
-      //* Check is meta field variable is set and not null
-      if ( isset( $entry['soure_url'] ) )
-      //* Setup variable to get metadata and esc
-      $url = esc_url( $entry['soure_url'] );
+      //* Setup URL
+      // Check is meta field variable is set and not null
+      if ( isset( $entry['url'] ) )
+      // Setup variable to get metadata and esc
+      $url = esc_url( $entry['url'] );
 
       // Setup conditional check
       if( ! empty( $url ) ){
          echo '<li itemprop="citation">';
-         echo '<strong>Source: </strong><a href="' .$url. '" target="_blank" itemprop="url">' .$url. '</a>';
+         echo '<strong>Source&colon;&nbsp;</strong><a href="' .$url. '" target="_blank" itemprop="url">' .$url. '</a>';
          echo '</li>';
       }
 
