@@ -22,7 +22,7 @@ The template source fields plugins contains the following files:
    - ```source-fields-metaboxes-v2.php```. Contains the functions to register the repeatable fields of custom meta boxes.
    - ```source-fields-notices.php```. Contains any plugin notices. In particular a check to see if CMB2 is already installed upon the plugins activation.
 - ```/css```
-   -```cmb2-custom.css```. Contains some custom css to modify how cmb2 handles repeatable groups. The css file is enqueued in the ```pb-cmb-source-fields.php```, file but is commented out by default.
+	- ```cmb2-custom.css```. Contains some custom css to modify how cmb2 handles repeatable groups. The css file is enqueued in the ```pb-cmb-source-fields.php```, file but is commented out by default.
 
 ## Structure
 
